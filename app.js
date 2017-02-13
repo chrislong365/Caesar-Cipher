@@ -1,6 +1,5 @@
 
 var input= "";
-var temp;
 var shiftBy;
 
 $('#cypher').click(function(){
@@ -12,7 +11,7 @@ $('#cypher').click(function(){
 
 function cypher (){
 	var output="";
-
+	var temp;
 	for ( var i=0; i<input.length; i++) {
 		if(input.charAt(i).charCodeAt(0)<64 || input.charAt(i).charCodeAt(0)>91 && 
 			input.charAt(i).charCodeAt(0)<96 || input.charAt(i).charCodeAt(0)>123)

@@ -34,9 +34,5 @@ function cypher (){
 			output= output.concat(String.fromCharCode(temp));
 		}
 	}
-	// $('#cyphered').text( "" );
-
-	$('#cyphered').replaceWith('<h4 id="cyphered">'+ output +'</h4>');
-	
-
+	$('#cyphered').html(output);
 }

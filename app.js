@@ -1,7 +1,6 @@
 
 var input= "";
 var temp;
-var output="";
 var shiftBy;
 
 $('#cypher').click(function(){
@@ -12,7 +11,8 @@ $('#cypher').click(function(){
 });
 
 function cypher (){
-	
+	var output="";
+
 	for ( var i=0; i<input.length; i++) {
 		if(input.charAt(i).charCodeAt(0)<64 || input.charAt(i).charCodeAt(0)>91 && 
 			input.charAt(i).charCodeAt(0)<96 || input.charAt(i).charCodeAt(0)>123)
@@ -34,5 +34,9 @@ function cypher (){
 			output= output.concat(String.fromCharCode(temp));
 		}
 	}
-	$('#cyphered').text(output);
+	// $('#cyphered').text( "" );
+
+	$('#cyphered').replaceWith('<h4 id="cyphered">'+ output +'</h4>');
+	
+
 }
